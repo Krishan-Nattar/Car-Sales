@@ -9,13 +9,6 @@ import Total from './components/Total';
 
 const App = (props) => {
 
-  const removeFeature = item => {
-    console.log('remove item');
-    
-  };
-
-
-
   return (
     <div className="boxes">
       <div className="box">
