@@ -6,7 +6,9 @@ import {removeItem} from '../actions/actions';
 const AddedFeature = props => {
   return (
     <li>
-      <button className="button is-danger" onClick={()=>{props.removeItem(props.feature)}}>X</button>
+      <span class="tag is-danger delete-tag">Delete
+      <button className="delete is-medium delete-buttonr" onClick={()=>{props.removeItem(props.feature)}} />
+      </span>
       {props.feature.name}
     </li>
   );
