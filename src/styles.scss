@@ -40,10 +40,12 @@ body {
   color: white;
   margin-right: 1em;
   padding: .25em .75em;
-  transition: all .25s ease-in;
-  &:hover {
-    background: white;
-    border: 1px solid hotpink;
-    color: #333;
-  }
+  // transition: all .25s ease-in;
+  // &:hover {
+  //   background: white;
+  //   border: 1px solid hotpink;
+  //   color: #333;
+  // }
 }
+
+//hover effect causes issues

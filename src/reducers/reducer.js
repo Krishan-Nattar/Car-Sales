@@ -1,4 +1,5 @@
-// import { UPDATE_TITLE } from '../actions/actions';
+import { BUY_ITEM } from '../actions/actions';
+import { bindActionCreators } from 'redux';
 
 const initialState = {
     additionalPrice: 0,
@@ -19,11 +20,17 @@ const initialState = {
 
 function reducer(state = initialState, action) {
   switch (action.type) {
-    // case UPDATE_TITLE:
-    //   return {
-    //     ...state,
-    //     title: action.payload
-    //   };
+    case BUY_ITEM:
+        console.log('buy item reducer')
+        console.log(action)
+        console.log(state.features);
+      return {
+        ...state,
+        car: {
+            ...state.car,
+            features: [...state.car.features, action.payload]
+        }
+      };
     default:
       return state;
   }
