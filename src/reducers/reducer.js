@@ -1,5 +1,5 @@
 import { BUY_ITEM } from '../actions/actions';
-import { bindActionCreators } from 'redux';
+import {REMOVE_ITEM} from '../actions/actions';
 
 const initialState = {
     additionalPrice: 0,
@@ -37,6 +37,17 @@ function reducer(state = initialState, action) {
             features: [...state.car.features, action.payload]
         },
         additionalPrice: state.additionalPrice += action.payload.price
+      };
+    case REMOVE_ITEM:
+      let newList = state.car.features.filter(item=>item.id != action.payload.id)
+      console.log(newList);
+      return {
+        ...state,
+        car: {
+            ...state.car,
+            features: newList
+        },
+        additionalPrice: state.additionalPrice -= action.payload.price
       };
     default:
       return state;
