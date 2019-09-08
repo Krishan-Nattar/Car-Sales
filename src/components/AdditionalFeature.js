@@ -6,7 +6,6 @@ const AdditionalFeature = props => {
 
   const buyItem = e => {
     e.preventDefault()
-    // console.log('buy item')
     props.buyItem(props.feature)
   };
 

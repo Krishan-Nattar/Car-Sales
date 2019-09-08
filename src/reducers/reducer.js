@@ -21,9 +21,15 @@ const initialState = {
 function reducer(state = initialState, action) {
   switch (action.type) {
     case BUY_ITEM:
-        console.log('buy item reducer')
-        console.log(action)
-        console.log(state.features);
+        let match = false;
+        state.car.features.forEach(item=>{
+            if(item.id.toString()===action.payload.id.toString()){
+                match = true;
+            }
+        })
+        if(match==true){
+            return state;
+        }
       return {
         ...state,
         car: {
