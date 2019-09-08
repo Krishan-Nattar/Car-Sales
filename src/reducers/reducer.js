@@ -36,7 +36,7 @@ function reducer(state = initialState, action) {
             ...state.car,
             features: [...state.car.features, action.payload]
         },
-        additionalPrice: state.additionalPrice += action.payload.price
+        additionalPrice: state.additionalPrice + action.payload.price
       };
     case REMOVE_ITEM:
       let newList = state.car.features.filter(item=>item.id != action.payload.id)
@@ -47,7 +47,7 @@ function reducer(state = initialState, action) {
             ...state.car,
             features: newList
         },
-        additionalPrice: state.additionalPrice -= action.payload.price
+        additionalPrice: state.additionalPrice - action.payload.price
       };
     default:
       return state;
