@@ -34,16 +34,22 @@ body {
     }
   }
 }
+
 .button {
-  background: hotpink;
-  border: 1px solid transparent;
-  color: white;
+  // background: hotpink;
+  // border: 1px solid transparent;
+//   color: white;
   margin-right: 1em;
-  padding: .25em .75em;
-  transition: all .25s ease-in;
+//   padding: .25em .75em;
+  // transition: all .25s ease-in;
   &:hover {
     background: white;
     border: 1px solid hotpink;
     color: #333;
   }
 }
+.delete-tag{
+  margin-right: 1em;
+  // margin-top: 30px !important;
+}
+//hover effect causes issues?
